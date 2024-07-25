@@ -22,6 +22,20 @@
             TIMESTAMP updated_at
         }
 
+        MOVIES {
+            INT id PK "AUTO_INCREMENT"
+            VARCHAR(255) title "NOT NULL"
+            TEXT description "NOT NULL"
+            DECIMAL budget "20, 2"
+            DATE release_date "NOT NULL"
+            TIME duration "NOT NULL"
+            INT director_id FK "PEOPLE(id)"
+            INT country_id FK "COUNTRIES(id)"
+            INT poster_file_id FK "FILES(id)"
+            TIMESTAMP created_at
+            TIMESTAMP updated_at
+        }
+
         COUNTRIES {
             INT id PK "AUTO_INCREMENT"
             VARCHAR(100) name "UNIQUE NOT NULL"
@@ -50,20 +64,6 @@
         GENRES {
             INT id PK "AUTO_INCREMENT"
             VARCHAR(50) name "UNIQUE NOT NULL"
-            TIMESTAMP created_at
-            TIMESTAMP updated_at
-        }
-
-        MOVIES {
-            INT id PK "AUTO_INCREMENT"
-            VARCHAR(255) title "NOT NULL"
-            TEXT description "NOT NULL"
-            DECIMAL budget "20, 2"
-            DATE release_date "NOT NULL"
-            TIME duration "NOT NULL"
-            INT director_id FK "PEOPLE(id)"
-            INT country_id FK "COUNTRIES(id)"
-            INT poster_file_id FK "FILES(id)"
             TIMESTAMP created_at
             TIMESTAMP updated_at
         }
