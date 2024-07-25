@@ -1,3 +1,5 @@
+This project uses MySQL as the relational SQL DBMS.
+
 ```mermaid
     erDiagram
         USERS {
